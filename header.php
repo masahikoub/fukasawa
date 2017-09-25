@@ -10,6 +10,16 @@
 		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 		 
 		<?php wp_head(); ?>
+
+<!– FlickrEx –>
+<script type=“text/javascript”>
+    var FLICKREX_EXIF_FORMAT = “%Camera%（%Lens%）
+%Exposure% sec, F %Aperture%, ISO %ISO Speed%, %Exposure Bias% EV, %Focal Length%“;
+</script>
+<script>(window.jQuery && parseFloat(window.jQuery().jquery) > 1.5) || document.write('<script src="//flickrex.drikin.com/stable/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+<script src="//flickrex.drikin.com/stable/flickrex.min.js"></script>
+<script src="//flickrex.drikin.com/stable/exifex.min.js"></script>
+<!– end of FlickrEx –>
 	</head>
 	
 	<body <?php body_class(); ?>>
