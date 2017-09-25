@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 
+<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+</div>
+
+
 <div class="content thin">
 											        
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -42,15 +50,7 @@
 					<div class="clear"></div>
 					
 				</div> <!-- /featured-media -->
-							
-			<?php elseif ( has_post_thumbnail() ) : ?>
-					
-				<div class="featured-media">
-		
-					<?php the_post_thumbnail('post-image'); ?>
-					
-				</div> <!-- /featured-media -->
-					
+			
 			<?php endif; ?>
 			
 			<div class="post-inner">
@@ -60,7 +60,8 @@
 					<h1 class="post-title"><?php the_title(); ?></h1>
 															
 				</div> <!-- /post-header -->
-				    
+				  
+
 			    <div class="post-content">
 			    
 			    	<?php 
